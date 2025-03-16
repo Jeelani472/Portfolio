@@ -13,8 +13,7 @@
             console.log("Submitting form data:", formObject);
     
             try {
-                const response =await fetch("/submit-form", 
-                    {
+                const response = await fetch("/submit-form", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
