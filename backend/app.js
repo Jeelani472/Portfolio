@@ -4,11 +4,20 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path=require('path');
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(cors({
+  origin: "http://localhost:5500", // or "http://127.0.0.1:5500"
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
+
 // Middleware
 app.use(cors());
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
 
@@ -19,10 +28,8 @@ app.use(express.static(path.join(__dirname, "../frontend")));
 // MongoDB Connection using environment variable
 const mongoURI = process.env.MONGODB_URI;
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(mongoURI
+)
   .then(() => console.log("✅ MongoDB Connected Successfully"))
   .catch(err => console.error("❌ MongoDB Connection Error:", err));
 
