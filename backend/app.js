@@ -19,11 +19,7 @@ app.use(cors({
 app.use(cors());
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../frontend")));
-
-
-// Serve static files from the "public" folder
-
+app.use(express.static(path.join(__dirname, '..', 'frontend')));
 
 // MongoDB Connection using environment variable
 const mongoURI = process.env.MONGODB_URI;
