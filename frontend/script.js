@@ -13,7 +13,7 @@
             console.log("Submitting form data:", formObject);
     
             try {
-                const response =await fetch("http://localhost:5000/submit-form", 
+                const response =await fetch("/submit-form", 
                     {
                     method: "POST",
                     headers: {
