@@ -1,58 +1,3 @@
-// const express = require("express");
-// const mongoose = require("mongoose");
-// const cors = require("cors");
-
-// const app = express();
-// const PORT = 5000;
-
-// // Middleware
-// app.use(cors());
-// app.use(express.json()); // This is crucial for parsing JSON bodies
-
-// // Connect to MongoDB
-// mongoose.connect('mongodb://127.0.0.1:27017/portfolio')
-//   .then(() => console.log("Connection is successful"))
-//   .catch(err => console.log(err));
-
-// // Define Schema & Model
-// const FormDataSchema = new mongoose.Schema({
-//   name: String,
-//   email: String,
-//   message: String,
-// });
-// const FormData = mongoose.model("FormData", FormDataSchema);
-
-// // API Route to handle form submission
-
-// app.get("/", (req, res) => {
-//   res.send("API is running");
-// });
-
-// app.post("/submit-form", async (req, res) => {
-//   try {
-//     const { name, email, message } = req.body;
-//     console.log("Received form data:", req.body);
-
-//     if (!name || !email || !message) {
-//       return res.status(400).json({ error: "All fields are required" });
-//     }
-
-//     const newFormData = new FormData({ name, email, message });
-//     await newFormData.save();
-
-//     res.status(201).json({ success: true, message: "Form submitted successfully!" });
-//   } catch (error) {
-//     console.error("Server error:", error);
-//     res.status(500).json({ error: "Server error" });
-//   }
-// });
-
-// // Start Server
-// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
-
-
 require('dotenv').config(); // Load environment variables from .env
 
 const express = require('express');
@@ -67,6 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
 
+
+// Serve static files from the "public" folder
 
 
 // MongoDB Connection using environment variable
