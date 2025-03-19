@@ -2,79 +2,137 @@
 
 * {
   border-color: #1e293b;
+  box-sizing: border-box;
 }
+
 body {
   background-color: #020817; /* Dark background */
   color: #fff;
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
 }
+
 a,
 a:hover {
   text-decoration: none;
 }
+
 .text-muted-foreground {
   color: #b8b8b8 !important;
+  line-height: 1.7;
 }
 
-/* NAVBAR */
 header {
   border-bottom: 1px solid rgb(49, 48, 48);
-}
-.navbar {
-  background-color: #02081799;
-  height: 80px;
+  width: 100%;
 }
 
+.offcanvas {
+  background-color: #020817 !important; 
+  color: #fff; /* text color */
+}
+
+.offcanvas.offcanvas-end {
+  transition: transform 0.5s ease-in-out; /* default is ~0.3s */
+}
+
+.offcanvas-backdrop.show {
+    background-color: rgba(27, 27, 27, 0.8);
+}
+
+.navbar {
+  background-color: #020817; 
+  min-height: 70px;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  width: 100%;
+  border: 1 px solid black !important;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures it's above other content */
+  transition: background-color 0.3s ease-in-out;
+}
 .nav-link {
   color: white;
+  padding: 0.5rem 1rem;
 }
-.social-icons {
-  margin-top: 3.5rem;
-}
+
 /* HERO SECTION */
 .hero-section {
-  padding: 100px 20px;
+  padding: 60px 20px;
   text-align: center;
-  height: 38.2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   letter-spacing: -0.05em;
   border-color: #1e293b;
+  width: 100%;
+  overflow: hidden;
 }
+
 .hero-section h1 {
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: bold;
+  margin-top: 0;
+  width: 100%;
+  padding: 0 10px;
 }
+
 .hero-section h1 .text-primary {
   color: #3b82f6;
 }
+
 .hero-section h2 {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   color: hsla(215, 20%, 65%, 1);
   margin-bottom: 20px;
+  width: 100%;
+  padding: 0 10px;
 }
+
 .hero-section p {
   max-width: 600px;
   margin: 0 auto 30px;
   color: hsla(215, 20%, 65%, 1);
+  padding: 0 10px;
+  width: 100%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .hero-btn {
   color: black;
   padding: 8px 22px;
+  margin: 0 5px 10px 5px;
+  display: inline-block;
+}
+
+.social-icons {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .scroll-btn {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
+
 .bounce {
   animation: bounce 1.5s infinite;
 }
+
 @keyframes bounce {
   0%,
   100% {
@@ -85,24 +143,29 @@ header {
   }
 }
 
+/* ABOUT SECTION */
 #about {
   background-color: #1e293b1a;
-  padding: 4rem;
+  padding: 4rem 1rem;
+  width: 100%;
+  overflow: hidden;
 }
-/* ABOUT SECTION */
+
 #about .profile-image {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border: 4px solid #3b82f6;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 20px;
 }
+
 #about h2,
 #skills h2 {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
 }
+
 #about .profile-image img {
   width: 100%;
   height: 100%;
@@ -112,8 +175,21 @@ header {
 .about-us {
   margin-top: 3rem;
 }
+
+.about-right {
+  padding: 0 15px;
+}
+
+.btn-resume {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* SKILLS SECTION */
 .skills {
   margin-top: 3rem;
+  padding: 0 15px;
+  width: 100%;
 }
 
 .skill-card {
@@ -127,6 +203,7 @@ header {
   transition: all 0.3s ease;
   position: relative;
   top: 0;
+  margin-bottom: 1rem;
 }
 
 .skill-card:hover {
@@ -143,15 +220,18 @@ header {
   display: inline-block;
   font-size: 0.9rem;
 }
+
 .skill-icon {
   font-size: 1.5rem;
   margin-right: 0.5rem;
   color: #3b82f6;
 }
+
 h1 {
   text-align: center;
   margin-bottom: 3rem;
 }
+
 .card-title {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
@@ -159,27 +239,32 @@ h1 {
   align-items: center;
 }
 
+/* PROJECT SECTION */
 .project-section {
   background-color: #1e293b1a;
+  padding: 0 15px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .header-section {
   text-align: center;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-  padding-top: 5rem;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  width: 100%;
 }
 
 .header-section h1 {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
   margin-bottom: 1rem;
 }
 
 .header-section p {
   color: #94a3b8;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .project-card {
@@ -190,6 +275,7 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
 }
 
 .project-card:hover {
@@ -232,29 +318,15 @@ h1 {
   color: #e2e8f0;
 }
 
-
-
-.header-section {
-  text-align: center;
-  padding: 4rem 0 2rem;
-}
-
-.header-section h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.header-section p {
-  color: #94a3b8;
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
+/* CONTACT SECTION */
+#contact {
+  padding: 0 15px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .contact-card {
   background-color: #070f1c;
-  /* background: rgba(255, 255, 255, 0.05); */
   backdrop-filter: blur(10px);
   border-radius: 1rem;
   padding: 1rem;
@@ -262,6 +334,7 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
 .contact-card:hover {
@@ -298,7 +371,7 @@ h1 {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
-  padding: 2.5rem;
+  padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 3rem;
 }
@@ -309,11 +382,12 @@ h1 {
 }
 
 .form-control {
-  background-color:#070f1c;
+  background-color: #070f1c;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
+  width: 100%;
 }
 
 .form-control:focus {
@@ -342,10 +416,12 @@ h1 {
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
+/* FOOTER */
 .footer {
-  margin-top: 6rem;
+  margin-top: 4rem;
   padding: 2rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
 .footer-text {
@@ -356,7 +432,10 @@ h1 {
 
 .footer-social-icons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .footer-social-icon {
@@ -380,3 +459,173 @@ h1 {
   color: #64748b;
   font-size: 0.9rem;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #020817;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-nav {
+    justify-content: flex-end;
+  }
+
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 15px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+
+  #about {
+    padding: 3rem 1rem;
+  }
+
+  .about-right {
+    margin-left: 0 !important;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-text {
+    margin: 0 auto;
+  }
+
+  .mt-md-0 {
+    margin-top: 1.5rem !important;
+  }
+
+  /* Fix for the profile image overlapping */
+  #about .profile-image {
+    margin-bottom: 2rem;
+  }
+
+  /* Fix for the About Me heading */
+  #about h2 {
+    margin-top: 1rem;
+    clear: both;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-section h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  #about .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .header-section {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .header-section h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Fix for the buttons in hero section */
+  .hero-btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto 1rem auto;
+  }
+
+  /* Fix for the social icons */
+  .social-icons {
+    margin-top: 1.5rem;
+  }
+
+  /* Fix for the contact cards */
+  .contact-card {
+    padding: 1rem 0.5rem;
+  }
+
+  /* Fix for the form inputs */
+  .form-control {
+    font-size: 0.9rem;
+  }
+
+  /* Fix for the footer */
+  .footer {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Fix for the overlapping content in the about section */
+@media (max-width: 480px) {
+  #about {
+    padding: 2rem 1rem;
+  }
+
+  .about-us {
+    margin-top: 1rem;
+  }
+
+  .about-right {
+    padding: 0 10px;
+  }
+
+  .about-right h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .about-right p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Fix for the stats boxes */
+  .shadow {
+    padding: 1rem !important;
+  }
+
+  .display-6 {
+    font-size: 1.8rem !important;
+  }
+}
+
+.offcanvas-backdrop.show {
+    background-color: rgba(2, 8, 23, 0.7);
+  }
+  
