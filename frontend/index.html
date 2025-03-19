@@ -16,88 +16,122 @@
       referrerpolicy="no-referrer"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
-    <!-- NAVBAR (sticky) -->
-    <header class="sticky-top">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-          <a class="navbar-brand fw-bold" href="#">Portfolio</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Portfolio</a>
+
+        <!-- This button toggles the offcanvas instead of a normal collapse -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Offcanvas on the right side -->
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link"href="#about"
+                  >About</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#skill-section">Skills</a>
+                <a class="nav-link" href="#skill-section"
+                  >Skills</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#projects"
+                  >Projects</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#contact"
+                  >Contact</a
+                >
               </li>
-              <li class="nav-item ms-lg-3">
-                <a class="btn btn-primary" href="#" target="_blank">Resume</a>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  target="_blank"
+                  >Resume</a
+                >
               </li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
     <!-- HERO SECTION -->
     <section class="hero-section position-relative">
-      <h1>Hi, I'm <span class="text-primary">M Abdul Khader Jeelani</span></h1>
-      <h2>Aspiring Software Engineering | Content Creator</h2>
-      <p>
-        Hackathon Winner 🏆 | Mentor & Problem Solver | Team Lead @ Digital Dreamers |
-        Passionate About Helping Others | B.Tech CSE '26 @ JNTUA
-      </p>
-      <div class="mb-4">
-        <a href="#projects" class="btn btn-primary me-2 hero-btn"
-          >View My Work</a
-        >
-        <a href="#contact" class="btn btn-dark hero-btn text-white"
-          >Contact Me</a
-        >
-      </div>
-      <!-- Social Icons -->
-      <div class="social-icons">
-        <!-- Replace with your own links -->
-        <a
-          href="https://github.com/Jeelani472"
-          class="text-white me-4"
-          target="_blank"
-        >
-          <i class="fab fa-github fa-1x"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mulla-abdul-khader-jeelani-30981a258"
-          class="text-white me-4"
-          target="_blank"
-        >
-          <i class="fab fa-linkedin fa-1x"></i>
-        </a>
-        <a
-          href="https://x.com/abdul_m54850?s=09"
-          class="text-white"
-          target="_blank"
-        >
-          <i class="fab fa-twitter fa-1x"></i>
-        </a>
+      <div class="container">
+        <h1>
+          Hi, I'm <span class="text-primary">M Abdul Khader Jeelani</span>
+        </h1>
+        <h2>Aspiring Software Engineering | Content Creator</h2>
+        <p>
+          Hackathon Winner 🏆 | Mentor & Problem Solver | Team Lead @ Digital
+          Dreamers | Passionate About Helping Others | B.Tech CSE '26 @ JNTUA
+        </p>
+        <div class="mb-4">
+          <a href="#projects" class="btn btn-primary me-4.2 hero-btn"
+            >View My Work</a
+          >
+          <a href="#contact" class="btn btn-dark hero-btn text-white"
+            >Contact Me</a
+          >
+        </div>
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <!-- Replace with your own links -->
+          <a
+            href="https://github.com/Jeelani472"
+            class="text-white me-4"
+            target="_blank"
+          >
+            <i class="fab fa-github fa-1x"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mulla-abdul-khader-jeelani-30981a258"
+            class="text-white me-4"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin fa-1x"></i>
+          </a>
+          <a
+            href="https://x.com/abdul_m54850?s=09"
+            class="text-white"
+            target="_blank"
+          >
+            <i class="fab fa-twitter fa-1x"></i>
+          </a>
+        </div>
       </div>
 
       <div class="scroll-btn">
@@ -127,33 +161,28 @@
       <div class="container">
         <h2 class="text-center text-3xl mb-12 md:text-4xl">About Me</h2>
         <div class="row align-items-center about-us">
-          <div class="col-md-5 text-center mb-md-0">
-            <!-- mb-4 */ -->
+          <div class="col-md-5 text-center mb-4 mb-md-0">
             <div class="profile-image">
               <!-- Replace with your actual image path -->
               <img src="Jeelani472.png" alt="M Abdul Khader Jeelani" />
             </div>
           </div>
 
-          <div class="col-md-6 ms-2 about-right">
+          <div class="col-md-7 text-center about-right">
             <h3 class="mb-3 fw-bold">Who am I?</h3>
             <p class="text-muted-foreground">
-              I am a prefinal year student at St John's College of Engineering & Technology,
-              pursuing a Bachelor of Technology in Computer Science. I have a
-              passion for building dynamic and responsive web applications and
-              aspire to become a proficient full stack developer. I enjoy
-              exploring new technologies, solving complex challenges, and have
-              already solved 200+ DSA problems. I have hands-on experience in both
-              frontend and backend development—including Express.js, RESTful APIs,
-              MongoDB, and Java—and have earned recognition as a GFG Institute Top
-              Ranker🥇. As a Hackathon Winner 🏆, Content Creator, Mentor, and Team
-              Lead at Digital Dreamers, I continuously strive to apply my knowledge
+              I am a prefinal year student at St John's College of Engineering &
+              Technology, pursuing a Bachelor of Technology in Computer Science.
+              I have a passion for building dynamic and responsive web
+              applications and aspire to become a proficient full stack
+              developer. I enjoy exploring new technologies, solving complex
+              challenges, and have already solved 300+ DSA problems. I have
+              hands-on experience in both frontend and backend
+              development—including Express.js, RESTful APIs, MongoDB, and
+              Java—and have earned recognition as a GFG Institute Top Ranker🥇.
+              As a Hackathon Winner 🏆, Content Creator, Mentor, and Team Lead
+              at Digital Dreamers, I continuously strive to apply my knowledge
               in practical projects.
-            </p>
-            <p class="text-muted-foreground">
-             Aspiring Software Engineer |
-              Expert in Frontend Development | Proficient in Express.js, RESTful APIs,
-              MongoDB, and Java | GFG Institute Top Ranker🥇 | CSE '26
             </p>
             <!-- Stats -->
             <div class="row my-4">
@@ -161,18 +190,20 @@
                 <div
                   class="shadow p-3 mb-5 border rounded p-4 rounded text-center"
                 >
-                  <h4 class="fw-bold text-primary display-6 mb-1">7+</h4>
-                  <p class="mb-0 text-muted-foreground">Years Experience</p>
+                  <h4 class="fw-bold text-primary display-6 mb-1">10+</h4>
+                  <p class="mb-0 text-muted-foreground">Mentor at Topmate(5%)</p>
                 </div>
               </div>
               <div class="col-sm-6 mb-3">
                 <div class="shadow p-3 mb-5 border p-4 rounded text-center">
-                  <h4 class="fw-bold text-primary display-6 mb-1">15+</h4>
+                  <h4 class="fw-bold text-primary display-6 mb-1">5+</h4>
                   <p class="mb-0 text-muted-foreground">Projects Completed</p>
                 </div>
               </div>
             </div>
-            <a href="#" class=" btn-resume  w-md-auto w-sm-auto btn btn-primary text-dark p-3"
+            <a
+              href="#"
+              class="btn-resume w-md-auto w-sm-auto btn btn-primary text-dark p-3"
               >Download Resume</a
             >
           </div>
@@ -235,7 +266,6 @@
             </div>
           </div>
 
-
           <!-- Programming Languages -->
           <div class="col-md-6 col-lg-4">
             <div class="skill-card">
@@ -282,7 +312,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -385,99 +414,157 @@
     </section>
 
     <!-- Contact Section -->
-     <section id="contact">
-    <div class="container">
-      <div class="header-section">
+    <section id="contact">
+      <div class="container">
+        <div class="header-section">
           <h1>Get In Touch</h1>
-          <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
-      </div>
+          <p>
+            Have a project in mind or want to discuss potential opportunities?
+            Feel free to reach out!
+          </p>
+        </div>
 
-      <div class="row g-4">
+        <div class="row g-4">
           <!-- Email -->
           <div class="col-md-4">
-              <div class="contact-card">
-                  <div class="icon-circle">
-                    <i class="fa-regular fa-envelope"></i>
-                  </div>
-                  <h2 class="contact-title">Email</h2>
-                  <p class="contact-info">jeelanmohammed529@gmail.com</p>
+            <div class="contact-card">
+              <div class="icon-circle">
+                <i class="fa-regular fa-envelope"></i>
               </div>
+              <h2 class="contact-title">Email</h2>
+              <p class="contact-info">
+                <a href="mailto:example@example.com" class="text-white"
+                  >example@example.com</a
+                >
+              </p>
+            </div>
           </div>
 
           <!-- Phone -->
           <div class="col-md-4">
-              <div class="contact-card">
-                  <div class="icon-circle">
-                    <i class="fa-solid fa-phone"></i>
-                  </div>
-                  <h2 class="contact-title">Phone</h2>
-                  <p class="contact-info">+91 9390000513</p>
+            <div class="contact-card">
+              <div class="icon-circle">
+                <i class="fa-solid fa-phone"></i>
               </div>
+              <h2 class="contact-title">Phone</h2>
+              <p class="contact-info">+91 9390000513</p>
+            </div>
           </div>
 
           <!-- Location -->
           <div class="col-md-4">
-              <div class="contact-card">
-                  <div class="icon-circle">
-                    <i class="fa-solid fa-location-dot"></i>
-                  </div>
-                  <h2 class="contact-title">Location</h2>
-                  <p class="contact-info">Adoni, Kurnool, India</p>
+            <div class="contact-card">
+              <div class="icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
               </div>
+              <h2 class="contact-title">Location</h2>
+              <p class="contact-info">Adoni, Kurnool, India</p>
+            </div>
           </div>
-      </div>
+        </div>
 
-      <!-- Contact Form -->
-      <div class="contact-form">
+        <!-- Contact Form -->
+        <div class="contact-form">
           <form id="contactForm">
-              <div class="row mb-4">
-                  <div class="col-md-6 mb-4 mb-md-0">
-                      <label for="name" class="form-label">Your Name</label>
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
-                  </div>
-                  <div class="col-md-6">
-                      <label for="email" class="form-label">Your Email</label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com">
-                  </div>
+            <div class="row mb-4">
+              <div class="col-md-6 mb-4 mb-md-0">
+                <label for="name" class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                />
               </div>
-              <div class="mb-4">
-                  <label for="subject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="subject" name="subject" placeholder="How can I help you?">
+              <div class="col-md-6">
+                <label for="email" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="example@example.com"
+                />
               </div>
-              <div class="mb-4">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your message here..."></textarea>
-              </div>
-              <div class="text-center">
-                  <button type="submit" class="btn btn-primary w-100">Send Message</button>
-              </div>
+            </div>
+            <div class="mb-4">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                name="subject"
+                placeholder="How can I help you?"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Your message here..."
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary w-100">
+                Send Message
+              </button>
+            </div>
           </form>
+        </div>
       </div>
     </section>
 
-      <!-- Footer -->
-      <footer class="footer ">
-        <div class="container">
-          <div class="row align-items-center">
-              <div class="col-md-6">
-                  <h3 class="mb-2">M Abdul Khader Jeelani</h3>
-                  <p class="footer-text mb-0"> Crafting innovative solutions and transforming ideas into reality. Thank you for visiting our portfolio—together, we are driving the future of digital innovation.</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h3 class="mb-2">M Abdul Khader Jeelani</h3>
+            <p class="footer-text mb-0">
+              Crafting innovative solutions and transforming ideas into reality.
+              Thank you for visiting our portfolio—together, we are driving the
+              future of digital innovation.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end mt-4 mt-md-0">
+            <div
+              class="d-flex justify-content-md-end md-2 justify-content-center"
+            >
+              <div class="footer-social-icons">
+                <a
+                  href="https://github.com/Jeelani472"
+                  class="footer-social-icon"
+                  ><i class="fab fa-github fa-1x"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/mulla-abdul-khader-jeelani-30981a258"
+                  class="footer-social-icon"
+                >
+                  <i class="fab fa-linkedin fa-1x"></i
+                ></a>
+                <a
+                  href="https://x.com/abdul_m54850?s=09"
+                  class="footer-social-icon"
+                  ><i class="fab fa-twitter fa-1x"></i
+                ></a>
+                <a href="mailto:example@example.com" class="footer-social-icon"
+                  ><i class="fa-regular fa-envelope"></i
+                ></a>
               </div>
-              <div class="col-md-6 text-md-end mt-4 mt-md-0">
-                  <div class="d-flex justify-content-md-end md-2 justify-content-center">
-                      <div class="footer-social-icons">
-                          <a href="https://github.com/Jeelani472" class="footer-social-icon"><i class="fab fa-github fa-1x"></i></a>
-                          <a href="https://www.linkedin.com/in/mulla-abdul-khader-jeelani-30981a258" class="footer-social-icon"> <i class="fab fa-linkedin fa-1x"></i></a>
-                          <a  href="https://x.com/abdul_m54850?s=09" class="footer-social-icon"><i class="fab fa-twitter fa-1x"></i></a>
-                          <a href="mailto:jeelanmohammed529@gmail.com" class="footer-social-icon"><i class="fa-regular fa-envelope"></i></a>
-                      </div>
-                  </div>
-                  <p class="copyright mt-3 mb-0">© 2025 M Abdul Khader Jeelani. All rights reserved.</p>
-              </div>
+            </div>
+            <p class="copyright mt-3 mb-0">
+              © 2025 M Abdul Khader Jeelani. All rights reserved.
+            </p>
           </div>
         </div>
-      </footer>
-      <script src="script.js"></script>
+      </div>
+    </footer>
+
+    <script src="script2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
