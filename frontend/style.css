@@ -644,3 +644,9 @@ h1 {
       height: 450px;
     }
   }
+
+ @media (min-width: 1000px) {
+    #about .profile-image{
+      height: 470px;
+    }
+  }
